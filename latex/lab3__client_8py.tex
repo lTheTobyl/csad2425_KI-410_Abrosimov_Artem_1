@@ -1,0 +1,155 @@
+\doxysection{C\+:/\+Users/\+Artem/\+Desktop/\+APKS/lab3/python\+Project/lab3\+\_\+client.py File Reference}
+\hypertarget{lab3__client_8py}{}\label{lab3__client_8py}\index{C:/Users/Artem/Desktop/APKS/lab3/pythonProject/lab3\_client.py@{C:/Users/Artem/Desktop/APKS/lab3/pythonProject/lab3\_client.py}}
+
+
+Implementation of a Tic-\/\+Tac-\/\+Toe game with serial communication and XML configuration.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lab3__client_8py_a86811d43308497781dd7deaafc99dd3e}{lab3\+\_\+client.\+load\+\_\+config}} ()
+\begin{DoxyCompactList}\small\item\em Load configuration settings from an XML file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_a72ed2bfee7faa47309f91d5765dd2e6d}{lab3\+\_\+client.\+update\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Update the game board based on serial input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_a8ebb4e12de4ab5554b44bcfcfe47d121}{lab3\+\_\+client.\+ask\+\_\+restart}} ()
+\begin{DoxyCompactList}\small\item\em Prompt for game restart. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_acaae040322036e73e1e87cc6fece8d96}{lab3\+\_\+client.\+reset\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Reset the game board to initial state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_a1ea72bf260d5ca2f2af9e6060ffa0d68}{lab3\+\_\+client.\+button\+\_\+click}} (id, from\+\_\+computer=False)
+\begin{DoxyCompactList}\small\item\em Handle button click events. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_ae48c310b40b49275343fdcd14be566fc}{lab3\+\_\+client.\+computer\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Make a computer move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lab3__client_8py_af406b4b57c3e405a15011e6f435799d8}{lab3\+\_\+client.\+select\+\_\+game\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em Select the game mode via a dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{lab3__client_8py_ac8356d81ba704e52c24200298ac24087}\label{lab3__client_8py_ac8356d81ba704e52c24200298ac24087} 
+{\bfseries lab3\+\_\+client.\+port}
+\item 
+\Hypertarget{lab3__client_8py_a923aa6b7094840135b8b6584654d8d64}\label{lab3__client_8py_a923aa6b7094840135b8b6584654d8d64} 
+{\bfseries lab3\+\_\+client.\+baud\+\_\+rate}
+\item 
+\Hypertarget{lab3__client_8py_a38a79872f6e22868f9f3ee159c59e827}\label{lab3__client_8py_a38a79872f6e22868f9f3ee159c59e827} 
+{\bfseries lab3\+\_\+client.\+timeout}
+\item 
+\Hypertarget{lab3__client_8py_a0bc3eb1644e1075a2b30a6a85fad7300}\label{lab3__client_8py_a0bc3eb1644e1075a2b30a6a85fad7300} 
+{\bfseries lab3\+\_\+client.\+ser} = serial.\+Serial(port, baud\+\_\+rate, timeout=timeout)
+\item 
+\Hypertarget{lab3__client_8py_a8ca9aab30b9fb7d9f7ccfc36456297ae}\label{lab3__client_8py_a8ca9aab30b9fb7d9f7ccfc36456297ae} 
+{\bfseries lab3\+\_\+client.\+root} = tk.\+Tk()
+\item 
+\Hypertarget{lab3__client_8py_a5dad2335b7db19099a39820c1dab34ba}\label{lab3__client_8py_a5dad2335b7db19099a39820c1dab34ba} 
+list {\bfseries lab3\+\_\+client.\+buttons} = \mbox{[}\mbox{[}None\mbox{]}\texorpdfstring{$\ast$}{*}3 for \+\_\+ in range(3)\mbox{]}
+\item 
+\Hypertarget{lab3__client_8py_a5e4969422ab2ca1ac9d37b64468f0bdb}\label{lab3__client_8py_a5e4969422ab2ca1ac9d37b64468f0bdb} 
+int {\bfseries lab3\+\_\+client.\+id} = 3 \texorpdfstring{$\ast$}{*} i + j + 1
+\item 
+\Hypertarget{lab3__client_8py_a412dfb8328a26132d030aa84c26793da}\label{lab3__client_8py_a412dfb8328a26132d030aa84c26793da} 
+{\bfseries lab3\+\_\+client.\+button} = tk.\+Button(root, text=str(id), width=10, height=3, command=lambda id=id\+: \mbox{\hyperlink{lab3__client_8py_a1ea72bf260d5ca2f2af9e6060ffa0d68}{button\+\_\+click}}(id))
+\item 
+\Hypertarget{lab3__client_8py_aa8daba3ca9c20aaadad879b1c520725f}\label{lab3__client_8py_aa8daba3ca9c20aaadad879b1c520725f} 
+{\bfseries lab3\+\_\+client.\+row}
+\item 
+\Hypertarget{lab3__client_8py_a929669c168676cf6d3df94b3074d1952}\label{lab3__client_8py_a929669c168676cf6d3df94b3074d1952} 
+{\bfseries lab3\+\_\+client.\+i}
+\item 
+\Hypertarget{lab3__client_8py_a36cbdf8c176ad0c06ce80ced21a83c53}\label{lab3__client_8py_a36cbdf8c176ad0c06ce80ced21a83c53} 
+{\bfseries lab3\+\_\+client.\+column}
+\item 
+\Hypertarget{lab3__client_8py_a84c514336b7bf82a3df4bf4d11f35f40}\label{lab3__client_8py_a84c514336b7bf82a3df4bf4d11f35f40} 
+{\bfseries lab3\+\_\+client.\+thread} = threading.\+Thread(target=\mbox{\hyperlink{lab3__client_8py_a72ed2bfee7faa47309f91d5765dd2e6d}{update\+\_\+board}})
+\item 
+\Hypertarget{lab3__client_8py_a147e5d8192476bec706ac9c5849f6ca6}\label{lab3__client_8py_a147e5d8192476bec706ac9c5849f6ca6} 
+{\bfseries lab3\+\_\+client.\+daemon}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of a Tic-\/\+Tac-\/\+Toe game with serial communication and XML configuration. 
+
+This module sets up a GUI for playing Tic-\/\+Tac-\/\+Toe using tkinter, communicates with an Arduino via serial port, and uses XML for configuration settings. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lab3__client_8py_a8ebb4e12de4ab5554b44bcfcfe47d121}\index{lab3\_client.py@{lab3\_client.py}!ask\_restart@{ask\_restart}}
+\index{ask\_restart@{ask\_restart}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{ask\_restart()}{ask\_restart()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_a8ebb4e12de4ab5554b44bcfcfe47d121} 
+lab3\+\_\+client.\+ask\+\_\+restart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prompt for game restart. 
+
+Asks the user if they want to play again and resets the board or closes the application. \Hypertarget{lab3__client_8py_a1ea72bf260d5ca2f2af9e6060ffa0d68}\index{lab3\_client.py@{lab3\_client.py}!button\_click@{button\_click}}
+\index{button\_click@{button\_click}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{button\_click()}{button\_click()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_a1ea72bf260d5ca2f2af9e6060ffa0d68} 
+lab3\+\_\+client.\+button\+\_\+click (\begin{DoxyParamCaption}\item[{}]{id}{, }\item[{}]{from\+\_\+computer}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+Handle button click events. 
+
+Processes a button click, updates the game state, and initiates computer move if necessary. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Button id. \\
+\hline
+{\em from\+\_\+computer} & Indicates if the move is made by the computer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lab3__client_8py_ae48c310b40b49275343fdcd14be566fc}\index{lab3\_client.py@{lab3\_client.py}!computer\_move@{computer\_move}}
+\index{computer\_move@{computer\_move}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{computer\_move()}{computer\_move()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_ae48c310b40b49275343fdcd14be566fc} 
+lab3\+\_\+client.\+computer\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Make a computer move. 
+
+Chooses a random available button for the computer\textquotesingle{}s move. \Hypertarget{lab3__client_8py_a86811d43308497781dd7deaafc99dd3e}\index{lab3\_client.py@{lab3\_client.py}!load\_config@{load\_config}}
+\index{load\_config@{load\_config}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{load\_config()}{load\_config()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_a86811d43308497781dd7deaafc99dd3e} 
+lab3\+\_\+client.\+load\+\_\+config (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load configuration settings from an XML file. 
+
+\begin{DoxyReturn}{Returns}
+Tuple containing port, baud rate, and timeout settings. 
+\end{DoxyReturn}
+\Hypertarget{lab3__client_8py_acaae040322036e73e1e87cc6fece8d96}\index{lab3\_client.py@{lab3\_client.py}!reset\_board@{reset\_board}}
+\index{reset\_board@{reset\_board}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{reset\_board()}{reset\_board()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_acaae040322036e73e1e87cc6fece8d96} 
+lab3\+\_\+client.\+reset\+\_\+board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reset the game board to initial state. 
+
+Resets all buttons on the game board to their initial state. \Hypertarget{lab3__client_8py_af406b4b57c3e405a15011e6f435799d8}\index{lab3\_client.py@{lab3\_client.py}!select\_game\_mode@{select\_game\_mode}}
+\index{select\_game\_mode@{select\_game\_mode}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{select\_game\_mode()}{select\_game\_mode()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_af406b4b57c3e405a15011e6f435799d8} 
+lab3\+\_\+client.\+select\+\_\+game\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Select the game mode via a dialog. 
+
+Asks the user to choose between single player or multiplayer modes. \Hypertarget{lab3__client_8py_a72ed2bfee7faa47309f91d5765dd2e6d}\index{lab3\_client.py@{lab3\_client.py}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!lab3\_client.py@{lab3\_client.py}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{lab3__client_8py_a72ed2bfee7faa47309f91d5765dd2e6d} 
+lab3\+\_\+client.\+update\+\_\+board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update the game board based on serial input. 
+
+Continuously reads data from the serial port and updates the GUI accordingly. 
