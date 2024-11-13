@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <serial>
+        <port>COM5</port>
+        <baudRate>9600</baudRate>
+        <timeout>1</timeout>
+    </serial>
+</config>
